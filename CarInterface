@@ -1,0 +1,36 @@
+import java.util.*;
+import java.io.*;
+
+interface Car{
+  //int maxSpeed = 120;
+  public void turnRight();
+  public void turnLeft();
+}
+class Bmw implements Car{
+  public void turnRight(){
+    System.out.println(" B TR");
+  }
+  public void turnLeft(){
+    System.out.println(" B TL");
+  }
+}
+class Audi implements Car{
+  public void turnRight(){
+    System.out.println(" A TR");
+    }
+  public void turnLeft(){
+    System.out.println(" A TL");
+  }
+}
+class Main{
+  public static void main(String[] args)
+  {
+    Car[] c = new Car[2];
+    c[0]= new Audi();
+    c[1] = new Bmw();;
+    for(Car item:c){
+      item.turnLeft();
+      item.turnRight();
+    }
+  }
+}
